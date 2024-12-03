@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="optimizer4OS",                  # Name of your library
-    version="0.1.0",                    # Initial version
+    version="0.1.1",                    # Initial version
     author="Zhang Wusan",                 # Your name
     author_email="zhangwusan1@gmail.com",  # Your email
     description="Cross-platform optimizer system cleaner library",
