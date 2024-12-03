@@ -1,4 +1,4 @@
-from optimizer.cleaner.factor import CleanerFactory
+from optimizer4OS.cleaner.factor import CleanerFactory
 
 def main():
     cleaner = CleanerFactory.get_cleaner()
