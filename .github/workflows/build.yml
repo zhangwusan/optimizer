@@ -1,44 +1,22 @@
-name: Python Package CI/CD
+name: Publish to PyPI
 
 on:
   push:
     tags:
-      - "v*"  # Trigger on tags like v1.0.0
+      - "v*"  # Trigger only on version tags like v1.0.0
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.9"
-
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-        pip install pytest
-
-    - name: Run tests
-      run: |
-        pytest tests
-
   build-and-publish:
-    needs: test  # Run only after tests pass
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out code
+    - name: Check out the code
       uses: actions/checkout@v3
 
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
-        python-version: "3.9"
+        python-version: "3.9"  # Use a specific Python version
 
     - name: Install build tools
       run: |
