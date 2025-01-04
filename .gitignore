@@ -1,3 +1,7 @@
 dist/
 **/__pycache__
 *.egg-info
+build/
+*.pyc
+CNN/
+data/
